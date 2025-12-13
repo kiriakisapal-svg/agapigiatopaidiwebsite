@@ -56,14 +56,14 @@
             color: var(--color-main-blue);
         }
 
-        /* --- Hero Section (Τροποποιημένο: Χωρίς εικόνα) --- */
+        /* --- Hero Section (Χωρίς εικόνα) --- */
         .hero-section {
             display: flex;
             justify-content: center;
             align-items: center;
             max-width: 900px;
             margin: 50px auto;
-            padding: 60px 40px; /* Αυξάνω το padding για να γεμίσει το κενό της εικόνας */
+            padding: 60px 40px; 
             text-align: center;
         }
 
@@ -85,7 +85,7 @@
             font-size: 1.1em;
             line-height: 1.6;
             margin-bottom: 30px;
-            max-width: 700px; /* Κρατάω το κείμενο συγκεντρωμένο */
+            max-width: 700px; 
             margin-left: auto;
             margin-right: auto;
         }
@@ -121,4 +121,139 @@
         .card {
             padding: 40px;
             border-radius: var(--card-radius);
-            box-shadow: 0 5px 15px rgba(0, 0, 0,
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-1 {
+            background-color: var(--color-main-blue);
+            color: var(--color-white);
+        }
+        .card-2 {
+            background-color: var(--color-main-green);
+            color: var(--color-dark-blue);
+        }
+        .card-3 {
+            background-color: var(--color-white);
+            border: 2px solid var(--color-main-blue);
+        }
+        .card-4 {
+            background-color: var(--color-white);
+            border: 2px solid var(--color-main-green);
+        }
+        
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        /* Custom bullet points */
+        .card-1 li:before, .card-3 li:before {
+            content: '•';
+            color: var(--color-main-green);
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        .card-2 li:before, .card-4 li:before {
+            content: '•';
+            color: var(--color-main-blue);
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--color-dark-blue);
+            color: var(--color-white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9em;
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>ΑΓΑΠΗ ΓΙΑ ΤΟ ΠΑΙΔΙ</h1>
+    </div>
+    <nav>
+        <a href="#">Αρχική</a>
+        <a href="#about">Ο Σύλλογος</a>
+        <a href="#actions">Δράσεις</a>
+        <a href="#help">Πώς μπορώ να βοηθήσω</a>
+        <a href="#contact">Επικοινωνία</a>
+    </nav>
+</header>
+
+<section class="hero-section">
+    <div class="hero-content">
+        <h2>Μια αγκαλιά στήριξης για κάθε οικογένεια</h2>
+        <p>Σε έναν κόσμο που συνεχώς αλλάζει, υπάρχουν οικογένειες που χρειάζονται τη δική μας αγκαλιά και στήριξη. Με αλληλεγγύη και αγάπη, εξασφαλίζουμε ότι κανένα παιδί δεν θα μείνει πίσω. Γίνε και εσύ μέρος της προσπάθειας.</p>
+        <a href="#about" class="hero-button">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</a>
+    </div>
+</section>
+
+<div class="content-sections">
+    
+    <section id="about" class="card card-1">
+        <h3>Ο Σύλλογος</h3>
+        <p>Ο σύλλογος "Αγάπη για το Παιδί" ιδρύθηκε σύμφωνα με την υπ' αριθμ.480/2008 απόφαση του Μονομελούς Πρωτοδικείου Κοζάνης, αρχικά με στόχο να βοηθήσει συμπληρωματικά τα παιδιά που φιλοξενούνταν στην "Στέγη Ανηλίκων". Στη συνέχεια, επεκτάθηκε ευρύτερα στην περιοχή της Δυτικής Μακεδονίας, με σκοπό την στήριξη σε επίπεδο υλικό, εκπαιδευτικό, κοινωνικό, πνευματικό και ψυχαγωγικό, με κάθε πρόσφορο μέσο της νεολαίας και της οικογένειάς τους, όπως φαίνεται και στο Καταστατικό.</p>
+    </section>
+
+    <section id="actions" class="card card-2">
+        <h3>Οι δράσεις μας</h3>
+        <ul>
+            <li>Παροχή τροφίμων και ρουχισμού</li>
+            <li>Υποστήριξη εκπαιδευτικών αναγκών</li>
+            <li>Κοινωνική και ψυχολογική στήριξη</li>
+            <li>Εκδηλώσεις και φιλανθρωπικές καμπάνιες</li>
+        </ul>
+    </section>
+
+    <section id="help" class="card card-3">
+        <h3>Πώς μπορείτε να βοηθήσετε</h3>
+        <p>Μπορείτε να προσφέρετε υποστήριξη με διάφορους τρόπους:</p>
+        <ul>
+            <li>Οικονομική δωρεά</li>
+            <li>Προσφορά ειδών πρώτης ανάγκης</li>
+            <li>Διάδοση του έργου μας</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="card card-4">
+        <h3>Επικοινωνία</h3>
+        <p>Email: agapigiatopaidi33@gmail.com</p>
+        <p>Τηλέφωνο: 6908238977</p>
+        <p>Διεύθυνση: Κοζάνη, Ελλάδα</p>
+    </section>
+    
+</div>
+
+<footer>
+    <p>© 2025 Αγάπη για το Παιδί - Όλα τα δικαιώματα κατοχυρωμένα.</p>
+</footer>
+</body>
+</html>
